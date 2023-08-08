@@ -1,0 +1,88 @@
+.footer {
+  background-image: url(../images/footer.jpg);
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #abb7c4;
+  font-weight: 400;
+  text-transform: none;
+}
+.footerheading h4 {
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.footertext {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #abb7c4;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #DBDCEF #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+  z-index: 1;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #DCF836 #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.blurbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  /* background-color: rgba(0, 0, 0, 0.8);  */
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100px !important;
+  height: 1000px !important; */
+}
+
+.blurbackground::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  z-index: 0;
+}
